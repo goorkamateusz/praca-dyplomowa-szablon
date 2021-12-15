@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatowanie list wyliczeniowych, wypunktowań i własnych otoczeń
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem} % pakiet pozwalający zarządzać formatowaniem list wyliczeniowych
+\setlist{noitemsep,topsep=4pt,parsep=2pt,partopsep=4pt,leftmargin=*}
+\setenumerate{labelindent=0pt,itemindent=0pt,leftmargin=!,label=\arabic*.} % \arabic, \alph
+\setlistdepth{4}
+\setlist[itemize]{leftmargin=1.5cm}  % margines listy
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=\normalfont\bfseries\textendash}
+\setlist[itemize,3]{label=$\ast$}
+\setlist[itemize,4]{label=$\cdot$}
+\renewlist{itemize}{itemize}{4}
+
+\makeatletter
+\renewenvironment{quote}{
+    \begin{list}{}
+        {
+            \setlength{\leftmargin}{1em}
+            \setlength{\topsep}{0pt}%
+            \setlength{\partopsep}{0pt}%
+            \setlength{\parskip}{0pt}%
+            \setlength{\parsep}{0pt}%
+            \setlength{\itemsep}{0pt}
+        }
+        }{
+    \end{list}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kropki po numerach sekcji
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@seccntformat#1{\csname the#1\endcsname.\quad}
+\def\numberline#1{\hb@xt@\@tempdima{#1\if&#1&\else.\fi\hfil}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pakiet do generowania indeksu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DisemulatePackage{imakeidx}
+\usepackage[makeindex,noautomatic]{imakeidx}
+\makeindex
+
+\makeatletter
+\renewenvironment{theindex}
+{\vskip 10pt\@makeschapterhead{\indexname}\vskip -3pt%
+    \@mkboth{\MakeUppercase\indexname}%
+    {\MakeUppercase\indexname}%
+    \vspace{-3.2mm}\parindent\z@%
+    \renewcommand\subitem{\par\hangindent 16\p@ \hspace*{0\p@}}%%
+    \phantomsection%
+    \begin{multicols}{2}
+        \thispagestyle{plain}
+        \parindent\z@
+        %\parskip\z@ \@plus .3\p@\relax
+        \let\item\@idxitem}
+        {\end{multicols}\clearpage}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spisy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bibliografia}[1]{
+    \chapterstyle{noNumbered}
+    \bibliographystyle{plabbrv} % plalpha, plabbrv
+    \bibliography{#1}
+    \appendix
+}
+
+\newcommand{\spistresci}{
+    \chapterstyle{noNumbered}
+    \mbox{}\pdfbookmark[0]{\contentsname}{content}
+    \label{spis-tresci}
+    \tableofcontents*
+}
+
+\newcommand{\spisrysunkow}{
+    \newpage
+    \chapterstyle{noNumbered}
+    % \mbox{}\pdfbookmark[0]{\listfigurename}{listfigurename}
+    \addcontentsline{toc}{chapter}{\listfigurename}
+    \listoffigures*
+}
+
+\newcommand{\spistabel}{
+    \newpage
+    \chapterstyle{noNumbered}
+    % \mbox{}\pdfbookmark[0]{\listtablename}{listtablename}
+    \addcontentsline{toc}{chapter}{\listtablename}
+    \listoftables*
+}
+
+\newcommand{\indeksrzeczowy}{
+    \chapterstyle{noNumbered}
+    % \mbox{}\pdfbookmark[0]{\indexname}{indexname}
+    \addcontentsline{toc}{chapter}{\indexname}
+    \printindex
+    \newpage
+}

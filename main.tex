@@ -1,8 +1,24 @@
 \include{template/template.tex}
-\include{metadata.tex}
+\include{content/metadata.tex}
 
 \begin{document}
 
 \maketitle
+\spistresci
+
+\input{content/0-skroty.tex} % można pominąć
+\input{content/dedykacja.tex} % można pominąć
+
+\chapterstyle{default}
+\pagestyle{outer}
+
+\importchapter{Wstęp}
+{wstep}{content/1-wstep.tex}
+
+\bibliografia{content/bibliografia}
+
+\spisrysunkow
+\spistabel
+\indeksrzeczowy
 
 \end{document}

@@ -1,0 +1,23 @@
+\usepackage{ifpdf}
+
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \DeclareGraphicsExtensions{.pdf,.jpg,.mps,.png}
+    \pdfcompresslevel=9
+    \pdfoutput=1
+    \makeatletter
+    \AtBeginDocument{
+        \hypersetup{
+            pdfinfo={
+                    Title = {\@title},
+                    Author = {\@author},
+                    Subject = {\@headerfirstline \@headersecondline},
+                    Keywords = {\@keywords}
+                }}
+    }
+    \makeatother
+\else
+    \usepackage{graphicx}
+    \DeclareGraphicsExtensions{.eps,.ps,.jpg,.mps,.png}
+\fi
+\sloppy

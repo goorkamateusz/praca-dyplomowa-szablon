@@ -1,4 +1,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ustawienia odpowiedzialne za sposób łamania dokumentu
+% i ułożenie elementów pływających
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \hyphenpenalty=10000 % nie dziel wyrazów zbyt często
+\clubpenalty=10000 %kara za sierotki
+\widowpenalty=10000 % nie pozostawiaj wdów
+\brokenpenalty=10000 % nie dziel wyrazów między stronami
+\exhyphenpenalty=999999 % nie dziel słów z myślnikiem
+\righthyphenmin=3 % dziel minimum 3 litery
+% \tolerance=4500
+% \pretolerance=250
+% \hfuzz=1.5pt
+% \hbadness=1450
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.35}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ustawienia rozmiarów: tekstu, nagłówka i stopki, marginesów
 % dla dokumentów klasy memoir
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,3 +51,73 @@
 % \setlength\floatsep{6pt plus 2pt minus 2pt}
 % \setlength\intextsep{12pt plus 2pt minus 2pt}
 % \setlength\textfloatsep{12pt plus 2pt minus 2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Czcionka do podpisów tabel i rysunków
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\captionnamefont{\small}
+\captiontitlefont{\small}
+% makro pozwalające zmienić sposób wypisywania rozdziału
+%\def\printchaptertitle##1{\fonttitle \space \thechapter.\space ##1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Przedefiniowanie etykiet w podpisach tabel i rysunków
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addto\captionspolish{ \renewcommand{\tablename}{Tab.} }
+\addto\captionspolish{ \renewcommand{\chaptername}{Rozdział} }
+\addto\captionspolish{ \renewcommand{\figurename}{Rys.} }
+\addto\captionspolish{ \renewcommand{\bibname}{Literatura} }
+\addto\captionspolish{ \renewcommand{\listfigurename}{Spis rysunków} }
+\addto\captionspolish{ \renewcommand{\listtablename}{Spis tabel} }
+\addto\captionspolish{ \renewcommand{\indexname}{Indeks rzeczowy} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deklaracja głębokościu numeracji
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\setsecnumdepth{subsection} % activating subsubsec numbering in doc
+
+\renewcommand{\chapternumberline}[1]{#1.\quad}
+\renewcommand{\cftchapterdotsep}{\cftdotsep}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definicje styli stron oraz stopek i nagłówków
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtopsmarks{headings}{
+	\nouppercaseheads
+}{
+	% \createmark{chapter}{both}{shownumber}{}{. \space}
+	% \createmark{chapter}{left}{shownumber}{}{. \space}
+	\createmark{section}{right}{shownumber}{}{. \space}
+}
+
+\makeatletter
+
+% \newcommand{\linethinkes}{\normalrulethickness}
+\newcommand{\linethinkes}{0.001pt}
+
+% Pagestyle: outer
+\copypagestyle{outer}{headings}
+\makeoddhead{outer}{}{}{\small\itshape\rightmark}
+\makeevenhead{outer}{\small\itshape\leftmark}{}{}
+\makeoddfoot{outer}{\small\@author:~\@titleShort}{}{\small\hyperref[spis-tresci]{\thepage}}
+\makeevenfoot{outer}{\small\thepage}{}{\small\@author:~\@title}
+\makeheadrule{outer}{\linewidth}{\linethinkes}
+\makefootrule{outer}{\linewidth}{\linethinkes}{2pt}
+
+% Pagestyle: plain
+\copypagestyle{plain}{headings} % overwrite plain with outer
+\makeoddhead{plain}{}{}{} % remove right header
+\makeevenhead{plain}{}{}{} % remove left header
+\makeevenfoot{plain}{}{}{}
+\makeoddfoot{plain}{}{}{}
+
+% Pagestyle: empty
+\copypagestyle{empty}{headings} % overwrite plain with outer
+\makeoddhead{empty}{}{}{} % remove right header
+\makeevenhead{empty}{}{}{} % remove left header
+\makeevenfoot{empty}{}{}{}
+\makeoddfoot{empty}{}{}{}
+
+\makeatother

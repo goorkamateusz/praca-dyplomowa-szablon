@@ -1,0 +1,47 @@
+\usepackage{listings} % pakiet do prezentacji kodu.
+% Aby rozwiązać problem polskich znaków:
+\lstset{literate=%-
+	{ą}{{\k{a}}}1 {ć}{{\'c}}1 {ę}{{\k{e}}}1 {ł}{{\l{}}}1 {ń}{{\'n}}1 {ó}{{\'o}}1 {ś}{{\'s}}1 {ż}
+	{{\.z}}1 {ź}{{\'z}}1 {Ą}{{\k{A}}}1 {Ć}{{\'C}}1 {Ę}{{\k{E}}}1 {Ł}{{\L{}}}1 {Ń}
+	{{\'N}}1 {Ó}{{\'O}}1 {Ś}{{\'S}}1 {Ż}{{\.Z}}1 {Ź}{{\'Z}}1 }
+
+\lstloadlanguages{csh,CIL,SQL,XML,sh,HTML} % załadowane języki
+
+\usepackage{color}
+\definecolor{red}{rgb}{0.6,0,0}
+\definecolor{blue}{rgb}{0,0,0.6}
+\definecolor{green}{rgb}{0,0.8,0}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{cloudwhite}{rgb}{1,1,1}
+
+\lstset{ % domyślna deklaracja
+	basicstyle=\linespread{1}\footnotesize\ttfamily,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	tabsize=2,
+	extendedchars=true,
+	breaklines=true,
+	breakautoindent=true,
+	% postbreak=\mbox{\textcolor{red}},
+	frame=b,
+	stringstyle=\color{blue}\ttfamily,
+	showspaces=false,
+	showtabs=false,
+	xleftmargin=17pt,
+	xrightmargin=0pt,
+	framexleftmargin=17pt,
+	framexrightmargin=0pt,
+	framexbottommargin=4pt,
+	commentstyle=\color{green},
+	morecomment=[l]{//}, %use comment-line-style!
+	morecomment=[s]{/*}{*/}, %for multiline comments
+	showstringspaces=false,
+	keywordstyle=\color{cyan},
+	identifierstyle=\color{red},
+	% backgroundcolor=\color{cloudwhite}
+}
+
+% \usepackage{caption}
+% \DeclareCaptionFormat{listing}{\colorbox{cloudwhite}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+% \captionsetup[lstlisting]{format=listing, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}

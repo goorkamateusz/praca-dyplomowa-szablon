@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kolory wierszy tabeli
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color, colortbl}
+\definecolor{TableHeader}{gray}{0.96}
+\definecolor{TableImportant}{rgb}{0.88,1,1}
+\newcommand{\tableheadercolor}{\rowcolor{TableHeader}}
+\newcommand{\tableimportantcolor}{\rowcolor{TableImportant}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Przydatne komendy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\todo}{[...TODO...]\index{...TODO...}}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1} ,,\nameref*{#1}''}}
+\newcommand{\lcode}[1]{\lstinline{#1}}
+\newcommand{\importchapter}[3]{\chapter{#1}\label{ch:#2}\input{#3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Standardowe wymiary obrazów
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bigimage}[1]{\includegraphics[width=1\columnwidth,height=12cm,keepaspectratio]{#1}}
+\newcommand{\mediumimage}[1]{\includegraphics[width=.75\columnwidth,height=8.5cm,keepaspectratio]{#1}}
+\newcommand{\smallimage}[1]{\includegraphics[width=.6\columnwidth,height=6cm,keepaspectratio]{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Przydatne środowiska
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{onepage}[1][0.5cm]%
+{ \def\vhsize{#1} \vspace{\vhsize} \noindent \minipage[c]{1\textwidth}}
+{ \endminipage \vspace{\vhsize} }
+
+\newenvironment{mytwocolumn}[1][0.48]{\noindent \begin{minipage}[t]{#1\textwidth}}{\end{minipage}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dedykacja
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{dedication}{
+    \ \vfill
+    \mbox{}\pdfbookmark[0]{Dedykacja}{dedykacja.1}
+    \begin{flushright}
+        \begin{minipage}[t]{0.8\linewidth}
+            }{
+        \end{minipage}
+    \end{flushright}
+    \vspace{1cm}
+}
+
+\newenvironment{dedicationpage}{
+    \newpage
+    \chapterstyle{noNumbered}
+    \pagestyle{empty}
+    \begin{dedication}
+        }{
+    \end{dedication} \newpage
+}
