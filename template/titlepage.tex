@@ -1,0 +1,59 @@
+\makeatletter
+
+\newcommand{\tpSectionHeader}[1]{\fontsize{16pt}{16pt}\selectfont \textsc{#1}}
+\newcommand{\tpSectionContent}{\fontsize{14pt}{16pt}\selectfont}
+
+\def\maketitle{
+	\pagestyle{empty}
+	\fontfamily{ppl}\selectfont % np. bch, put, qcs
+
+	\begin{flushleft}
+		\centering
+		{\fontsize{24pt}{26pt}\selectfont \@university}\\[4mm]
+		{\fontsize{16pt}{20pt}\selectfont \@faculty}\\
+
+		\vspace{1mm} \hrule \vspace{5mm}
+
+		\flushleft
+		\fontsize{14pt}{16pt}\selectfont
+		\begin{tabular}{ll}
+			KIERUNEK:    & {\fontsize{16pt}{18pt}\selectfont \@field} \\
+			% SPECJALNOŚĆ: & \@specialisation \\
+		\end{tabular}
+
+		\vspace{15mm}
+
+		\centering
+		{\fontsize{23pt}{25pt}\selectfont \@headerfirstline}\\[2mm]
+		{\fontsize{23pt}{25pt}\selectfont \@headersecondline}\\
+
+		\vspace{1cm}
+	\end{flushleft}
+
+	\begin{flushright}
+		\begin{minipage}[t]{104mm}
+			\centering
+			\tpSectionHeader{TYTUŁ PRACY:}\\[5mm]
+			\tpSectionContent \@title\\[5mm]
+			\tpSectionContent \@titleENG\\[10mm]
+			\tpSectionHeader{AUTOR:}\\[1mm]
+			\tpSectionContent \@author\\
+		\end{minipage}
+	\end{flushright}
+
+	\vfill
+
+	\begin{tabularx}{\linewidth}{p{6.5cm}l}
+		 & {\tpSectionHeader{PROMOTOR:}} \\[1mm]
+		 & {\tpSectionContent \@supervisor} \\[10mm]
+		%  & {\fontsize{16pt}{18pt}\selectfont OCENA PRACY:}      \\[20mm]
+	\end{tabularx}
+
+	\vspace{4.5cm} \hrule \vspace{1mm}
+	{\centering {\fontsize{14pt}{16pt}\selectfont \@date}\\[0cm]}
+
+	\normalfont
+	\cleardoublepage
+}
+
+\makeatother

@@ -1,0 +1,5 @@
+/latex-build/
+*.log
+/versions
+/img/drawio/**.drawio.pdf
+**.private.**

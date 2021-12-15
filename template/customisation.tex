@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ustawienia rozmiarów: tekstu, nagłówka i stopki, marginesów
+% dla dokumentów klasy memoir
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\topmarginvalue}{1.5cm}
+\newcommand{\bottommarginvalue}{2.0cm}
+\setlength{\spinemargin}{2.8cm}
+\setlength{\foremargin}{2.8cm}
+\setlength{\marginparsep}{2mm}
+\setlength{\marginparwidth}{2.3mm}
+\setlength{\headsep}{10pt}
+\setlength{\headheight}{13.6pt} % wartość baselineskip dla czcionki 11pt tj. \small wynosi 13.6pt
+\setlength{\footskip}{\headsep+\headheight}
+\setlength{\uppermargin}{\headheight+\headsep+\topmarginvalue}
+\setlength{\textheight}{\paperheight-\uppermargin-\footskip-\bottommarginvalue}
+\setlength{\textwidth}{\paperwidth-\spinemargin-\foremargin}
+% \settrimmedsize{297mm}{210mm}{*}
+% \settrims{0mm}{0mm}
+\checkandfixthelayout[fixed] % konieczne, aby się dobrze wszystko poustawiało
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ustawienia odległości linii, wcięć, odstępów
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\linespread{1.01} % Wysokość linii # Było: 1
+\setlength{\parindent}{18.5pt} % Wcięcie na początku paragrafu
+\setlength{\parskip}{2pt} % Odstęp między paragrafami
+% \setbeforesecskip{10pt plus 0.5ex}%{-3.5ex \@plus -1ex \@minus -.2ex}
+% \setaftersecskip{10pt plus 0.5ex}%\onelineskip}
+% \setbeforesubsecskip{8pt plus 0.5ex}%{-3.5ex \@plus -1ex \@minus -.2ex}
+% \setaftersubsecskip{8pt plus 0.5ex}%\onelineskip}
+% \setlength\floatsep{6pt plus 2pt minus 2pt}
+% \setlength\intextsep{12pt plus 2pt minus 2pt}
+% \setlength\textfloatsep{12pt plus 2pt minus 2pt}
