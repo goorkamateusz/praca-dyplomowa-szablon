@@ -1,12 +1,15 @@
 # Szablon pracy dyplomowej
 
-Strona tytułowa zgodnie z szablonem dla wefim 2022.
+**[Przykład PDF](versions/PracaDyplomowa-LAST.pdf)**
 
-[Przykład PDF](versions/PracaDyplomowa-LAST.pdf)
+Strona tytułowa bazująca na [szablonie][wefimszablon] dla wefim 2022.
 
-Autor: Górka Mateusz, [@goorkamateusz](https://goorkamateusz.github.io)
+Minimalny szablon zawierający tylko stronę tytułową zostawiłem na [branch'u titlePage (tutaj)](https://github.com/goorkamateusz/praca-dyplomowa-szablon/tree/titlePage).
 
-Szablon bazujący na szablonie Tomasza Kubika oraz Adama Ratajczaka dawnego wydziału elektroniki.
+## Autorzy
+Górka Mateusz, [@goorkamateusz](https://goorkamateusz.github.io)
+
+Szablon bazujący na szablonach Tomasza Kubika oraz Adama Ratajczaka z dawnego wydziału elektroniki.
 
 - dr inż. Tomasz Kubik\
  [Strona internetowa](http://tomasz.kubik.staff.iiar.pwr.wroc.pl/)
@@ -34,3 +37,5 @@ Oznacza to, że wszystkie zawarte nim treści można kopiować i  wykorzystywać
 Edycja i rozpowszechnianie szablonu wymaga podania wszystkich autorów, najlepiej wraz z odnośnikami do miejsca w których szablon jest udostępniany.
 
 Przy wykorzystaniu szablonu w pracy dyplomowej nie jest wymagane podawanie autora szablonu.
+
+[wefimszablon]: https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwefim.pwr.edu.pl%2Ffcp%2FFGBUKOQtTKlQhbx08SlkDUg1eUTgtCgg9ACFDC1RDS2FBWxslAxt1FSVcViU%2F219%2Fpublic%2F2021%2Fdocs%2Fdyplomanci%2F08112021%2Fwzor_strony_tytulowej_inz_12.doc&wdOrigin=BROWSELINK&fbclid=IwAR3QWe-6gLxgH4UJTaxIHrGUU6fu77SGT4IZecImWhOfkByDa_ubz0pB0GA
