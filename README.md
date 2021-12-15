@@ -10,9 +10,19 @@ Szablon bazujący na szablonie Tomasza Kubika oraz Adama Ratajczaka dawnego wydz
 
 - dr inż. Tomasz Kubik\
  [Strona internetowa](http://tomasz.kubik.staff.iiar.pwr.wroc.pl/)
-
 - dr inż. Adam Ratajczak\
 [Strona internetowa](http://diablo.iiar.pwr.edu.pl/~ar/LaTeX/mgr.php)
+
+## Wykorzystywane wtyczki do Visual Studio Code
+
+- [LaTeX](https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-latex)\
+_Ogromnie przydatne narzędzie do sprawdzania poprawności ortograficznej, składniowej i gramatycznej._
+- [LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
+- [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+- [ToDo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+- [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+
+W pliku `.vscode/settings.json` pozostawiłem przydatne konfiguracje edytora i wtyczek.
 
 ## Licencja
 
