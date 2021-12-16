@@ -1,0 +1,223 @@
+\section{Struktura pracy - pod rozdział}
+
+\index{Podrozdział}
+\subsection{Podpodrozdział}
+
+Nemo voluptatum earum praesentium. Inventore ab fuga cum esse sit ullam facilis ipsa voluptate. Quod consequatur non porro alias at non. Przykład TODO:
+
+\todo
+
+\subsubsection{podpodpodrozdział}
+Quas aut maxime quaerat fugit perferendis asperiores accusantium. Eligendi non assumenda nam libero commodi architecto. Doloribus quia nihil sed dolore eum. Consequatur consequatur vero.
+Odnośnik do rozdziału \ref{ch:wstep}, lub \fullref{ch:wstep}.
+
+\subsubsection{quis sunt ipsam}
+Temporibus eum ullam est voluptatem iste quae mollitia. Et quae et voluptatum. Fuga reprehenderit voluptatem magni quasi sunt. Adipisci rem omnis et enim quas adipisci consequatur. A tu jest odnośnik do bibliografii.\index{Przykład}
+
+Quia facere officiis sit. Eaque enim voluptate provident. Non aut ad eligendi ratione. Laboriosam perspiciatis quaerat atque. Est asperiores exercitationem alias aliquam nobis cumque necessitatibus veniam dolorum.
+
+I oczywiście jakieś podpunkty. Itemize też można wrzucić w środowisko \lcode{onepage}, jak nie chcemy by się rozjechały na dwie strony.
+
+\begin{itemize}
+    \item ut inventore tempora
+    \item aut
+    \item et natus non
+    \item et reprehenderit non
+\end{itemize}
+
+\subsection{Podpodrozdział drugi}
+Ipsam eum minus et quasi. Ratione earum fugiat ex explicabo. Ut dignissimos amet sunt.
+
+\index{Akapit}
+\paragraph{Akapit z tytułem}
+Perspiciatis occaecati nemo iusto magnam pariatur voluptatum. Molestiae voluptatem tenetur consequatur totam expedita qui pariatur sunt minima. Optio porro delectus nihil iste. Eos sunt voluptatibus possimus velit voluptatum dolor. Accusantium a qui vitae sed debitis.
+
+\paragraph{Inny akapit z tytułem}
+Minima voluptates quas explicabo et eaque enim recusandae. Quisquam neque modi repellendus inventore alias omnis aut non. Aut nemo non omnis neque. Tempora reiciendis sunt ullam id eius ducimus enim. Commodi minus incidunt facilis.
+
+\subsubsection{amet rerum earum}
+Eum numquam recusandae qui dolores consequatur quae facere voluptatibus sed. Qui enim repellendus. Et est harum ab. Et velit rem non velit dolore molestias sit est sapiente.
+
+
+\section{Tabelki, tabeleczki}
+\index{Tabelki}
+
+Vitae et ad fugit voluptas dolorum consequatur. Molestias deserunt minus sunt excepturi similique officia qui quasi. Aut similique quis aperiam esse. Voluptatum ad debitis consequatur exercitationem earum doloremque nihil. Et voluptatem iure et modi eius.
+
+Voluptatibus explicabo natus nostrum. Deserunt quam dolorem velit. Minima fuga amet vitae ratione minima qui est molestiae. Cupiditate porro repudiandae in tempora et voluptatem deleniti aliquid.
+
+Odnośnik to tabeli \ref{tab:przyklad-bez-odnosnikow}.
+Pełny odnośnik do tabeli \fullref{tab:przyklad-bez-odnosnikow}.
+
+\begin{table}[tbh] \small
+    \centering
+    \caption{Przykładowa tabelka bez odnośników i bez kolorowania}
+    \label{tab:przyklad-bez-odnosnikow}
+    \begin{tabular}{|c|l|c|} \hline \
+        Baza danych   & Licencja       & Rok powstania \\ \hline \hline
+        Oracle        & Komercyjna     & 1980          \\ \hline
+        MS SQL Server & Komercyjna     & 1989          \\ \hline
+        PostgreSQL    & BSD            & 1989          \\ \hline
+        MySQL         & Komercyjna/GPL & 1995          \\ \hline
+        MariaDb       & GPL            & 2009          \\ \hline
+    \end{tabular}
+\end{table}
+
+Aliquid aspernatur est velit dolores nobis animi accusamus debitis est. Aut ut non inventore et consequuntur fuga corporis iste praesentium. Accusantium molestiae repellat non officiis ut sapiente illum facere. Et magnam assumenda repellat. Corporis et et.
+
+\begin{table}[tbh] \small
+    \centering
+    \caption{Przykładowa tabelka z odnosnikami i z kolorowaniem}
+    \label{tab:przyklad_pierwszy}
+    \begin{threeparttable}
+        \begin{tabular}{|c|l|c|} \hline \tableheadercolor \
+            Baza danych   & Licencja                & Rok powstania \\ \hline \hline
+            Oracle        & Komercyjna              & 1980          \\ \hline
+            MS SQL Server & Komercyjna              & 1989          \\ \hline
+            PostgreSQL    & BSD\tnote{a}            & 1989          \\ \hline
+            MySQL         & Komercyjna/GPL\tnote{a} & 1995          \\ \hline
+            MariaDb       & GPL\tnote{a}            & 2009\tnote{b} \\ \hline
+        \end{tabular}
+
+        \begin{tablenotes}
+            \item[a] Licencja otwarto źródłowa
+            \item[b] Może to prawda
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+\begin{table}[tb] \small
+    \centering
+    \caption{I jeszcze tabelka dopasowana do szerokości strony z łamaniem wierszy}
+    \label{tab:przyklad_pierwszy}
+    \begin{tabularx}{0.85\linewidth}{|c|X|c|} \hline \tableheadercolor \
+        Baza danych   & Licencja                                                                                                                                                                                                                                                              & Rok powstania \\ \hline \hline
+        Oracle        & Komercyjna                                                                                                                                                                                                                                                            & 1980          \\ \hline
+        MS SQL Server & Et quo veritatis provident sint maxime impedit et est repudiandae. Aut porro totam aliquam ut architecto excepturi qui est exercitationem. Dolor recusandae quidem autem. Rerum sunt quia earum sunt est molestiae. Autem nisi quas. Fuga eos vitae unde quidem eius. & 1989          \\ \hline
+        PostgreSQL    & BSD                                                                                                                                                                                                                                                                   & 1989          \\ \hline
+        MySQL         & Komercyjna/GPL                                                                                                                                                                                                                                                        & 1995          \\ \hline
+        MariaDb       & GPL                                                                                                                                                                                                                                                                   & 2009          \\ \hline
+    \end{tabularx}
+\end{table}
+
+Wymuszone przełamanie strony.
+\clearpage
+
+\section{Mój patent na obrazki}
+\index{Obrazki}
+
+Zerknij w kod, narzuciłem trzy wymiary na zdjęcia ograniczając wysokość i szerokość - w praktyce bardzo przydatne i wygląda estetycznie. Odnośnik do zdjęcia \ref{img:big}.
+
+\begin{figure}[h]
+    \centering
+    \smallimage{img/by-nc-sa.png}
+    \caption{Mały obrazek}
+    \label{img:small}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \mediumimage{img/by-nc-sa.png}
+    \caption{Średni obrazek}
+    \label{img:meidum}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \bigimage{img/by-nc-sa.png}
+    \caption{Duży obrazek}
+    \label{img:big}
+\end{figure}
+
+Bo czasami potrzeba w dwóch kolumnach: \ref{img:pierwsza-kolumna}
+A czasamu potrzeba tylko dwa obrazy na jedenj stronie \ref{img:na-calej-stronie}
+
+\begin{figure}[h]
+    \begin{mytwocolumn}
+        \bigimage{img/by-nc-sa.png}
+        \caption{pierwsza kolumna}
+        \label{img:pierwsza-kolumna}
+    \end{mytwocolumn}
+    \begin{mytwocolumn}
+        \bigimage{img/by-nc-sa.png}
+        \caption{Druga kolumna}
+        \label{img:druga_kolumna}
+    \end{mytwocolumn}
+\end{figure}
+
+
+\begin{figure}[h]
+    \begin{minipage}[t][0.5\textheight][t]{\linewidth}
+        \centering
+        \smallimage{img/by-nc-sa.png}
+        \caption{Qui placeat et deserunt consequatur eos sed.}
+        \label{img:na-calej-stronie}
+    \end{minipage}
+
+    \begin{minipage}[t][0.48\textheight][t]{\linewidth}
+        \centering
+        \mediumimage{img/by-nc-sa.png}
+        \caption{Quis voluptatem rem et consequatur.}
+        \label{img:na-calej-stronie_2}
+    \end{minipage}
+\end{figure}
+
+Wymuszone przełamanie strony. Raczej nie polecam do wykorzystania w praktyce, przyspaża zbędnej roboty.
+Ale zakomentuj to przełamanie i zobacz co zrobi z obrazkami!
+\clearpage % zakomentuj tą linię i zobacz co zrobi z obrazkami <-
+
+\section{Kod - to co najciekawsze}
+
+Środowisko \lcode{onepage} jest nadpisaniem \lcode{mini page}, tak aby listingi nie były dzielone na strony, jak chcesz podzielić: wywal \lcode{onepage}.
+A przy okazji zobacz jak w \lcode{lcode} formatuję kod w linii, \lcode{int *ptr = &number; // :3}.
+
+\begin{onepage}
+    \begin{lstlisting}[
+    caption={Przykład C\#},
+    label=code:ckrzak,
+    language={[Sharp]C},
+    escapechar=`
+]
+namespace Example
+{
+    public class Singleton<T> where T : class, new() `\label{code:where}`
+    {
+        private static T instance;
+
+        public static Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new();
+                return instance;
+            }
+        }
+    }
+}
+\end{lstlisting}
+\end{onepage}
+
+A teraz \lcode{NAJLEPSZE!}, odwołanie do linii w kodzie. Na listingu \ref{code:ckrzak} w linii \ref{code:where} jest takie fajne słówko \lcode{where}. Wymagane jest dodanie np. \lcode{escapechar=`} do argumentów \lcode{lstlisting}.
+
+\begin{onepage}
+    \begin{lstlisting}[
+    caption={Przykład bash (i jakiś teskt et numquam omnis illo a tempora)},
+    label=code:bash,
+    language={sh}
+]
+#!/bash/sh
+version=$(git describe --tags $(git rev-list --tags --max-count=1))
+echo "$version"
+
+path="latex-build/main.pdf"
+mkdir -p versions
+
+cp "$path" "versions/PracaDyplomowa-$version.pdf"
+cp "$path" "versions/PracaDyplomowa-LAST.pdf"
+
+cd versions
+start .
+cd ..
+\end{lstlisting}
+\end{onepage}
