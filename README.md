@@ -29,6 +29,9 @@ _Ogromnie przydatne narzędzie do sprawdzania poprawności ortograficznej, skła
 
 W pliku `.vscode/settings.json` pozostawiłem przydatne konfiguracje edytora i wtyczek.
 
+### Snippety
+[Snippets in Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+
 ### Bash - twój przyjaciel automatyzacji
 Zapisywanie kolejnych wersji w plikach pdf.
 
