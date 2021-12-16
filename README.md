@@ -16,7 +16,9 @@ Szablon bazujący na szablonach Tomasza Kubika oraz Adama Ratajczaka z dawnego w
 - dr inż. Adam Ratajczak\
 [Strona internetowa](http://diablo.iiar.pwr.edu.pl/~ar/LaTeX/mgr.php)
 
-## Wykorzystywane wtyczki do Visual Studio Code
+## Life hacks
+
+### Wykorzystywane wtyczki do Visual Studio Code
 
 - [LaTeX](https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-latex)\
 _Ogromnie przydatne narzędzie do sprawdzania poprawności ortograficznej, składniowej i gramatycznej._
@@ -26,6 +28,14 @@ _Ogromnie przydatne narzędzie do sprawdzania poprawności ortograficznej, skła
 - [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 
 W pliku `.vscode/settings.json` pozostawiłem przydatne konfiguracje edytora i wtyczek.
+
+### Bash - twój przyjaciel automatyzacji
+Zapisywanie kolejnych wersji w plikach pdf.
+
+```sh
+git tag x.y.z
+. save.sh
+```
 
 ## Licencja
 
