@@ -40,6 +40,8 @@ git tag x.y.z
 . save.sh
 ```
 
+*Skrypt korzysta z folderu `/latex-build`, jako źródła źródła w którym znajduje się zbudowana wersja pracy w PDF (zgodnie z ustawieniami w `/.vscode/settings.json`, oraz folderu `/versions` do zapisywania kolejnych wersji pracy w formacie PDF).
+
 ## Licencja
 
 Szablon jest udostępniany na licencji Creative Commons: Uznanie autorstwa - Użycie niekomercyjne - Na tych samych warunkach, 3.0 Polska, Wrocław 2022.
