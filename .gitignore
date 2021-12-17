@@ -1,3 +1,5 @@
+*venv*
+
 # Custom
 /latex-build/
 *.log
