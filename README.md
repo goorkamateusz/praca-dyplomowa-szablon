@@ -16,6 +16,11 @@ Szablon bazujący na szablonach Tomasza Kubika oraz Adama Ratajczaka z dawnego w
 - dr inż. Adam Ratajczak\
 [Strona internetowa](http://diablo.iiar.pwr.edu.pl/~ar/LaTeX/mgr.php)
 
+## Potrzebujesz tylko strony tytułowej?
+
+Znajdź w obecnym szablonie deklarację `\def\maketitle` i podmień na to co znajdziesz w pliku [titlepage.tex](template/src/titlepage.tex).
+Jeżeli są jakieś błędny prawdopodobnie zmienne o danych, jak tytuł, autor są różne i zintegruj je do deklaracji w [metadata-definitions.tex](template/src/metadata-definitions.tex) i [metadata.tex](content/metadata.tex).
+
 ## Life hacks
 
 ### Wykorzystywane wtyczki do Visual Studio Code
