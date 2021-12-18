@@ -1,0 +1,12 @@
+[submodule "sgai"]
+	path = sgai
+	url = https://github.com/John15321/sgai.git
+[submodule "snake_game"]
+	path = snake_game
+	url = https://github.com/John15321/snake_game.git
+[submodule "source_code/snake_game"]
+	path = source_code/snake_game
+	url = https://github.com/John15321/snake_game.git
+[submodule "source_code/sgai"]
+	path = source_code/sgai
+	url = https://github.com/John15321/sgai.git
